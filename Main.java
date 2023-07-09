@@ -1,35 +1,52 @@
-package homework;
+import static java.lang.Long.sum;
 
 public class Main {
+
     public static void main(String[] args) {
 
-        char ch = 'G';
-        int in = 89;
-        byte bt = 4;
-        short sht = 56;
-        float flt = 4.7333436f;
-        double dbl = 4.355453532;
-        long lg = 12121l;
+        String simpleString = new String("I study Basic Java!");
+        System.out.println(simpleString);
+        System.out.println(simpleString.length());
 
-        System.out.println("Character: " + ch);
-        System.out.println("Integer: " + in);
-        System.out.println("Byte: " + bt);
-        System.out.println("Short: " + sht);
-        System.out.println("Float: " + flt);
-        System.out.println("Double: " + dbl);
-        System.out.println("Long: " + lg);
+        System.out.println(simpleString.charAt(18));
 
 
-        System.out.println("_______________________________________________________");
+        System.out.println(simpleString.replace('a', 'o'));
+        System.out.println(simpleString.toUpperCase());
+        System.out.println(simpleString.toLowerCase());
+        System.out.println(simpleString.substring(0, 13) + "!");
 
-        int num = 345;
-        int firstNum = num / 100;
-        int secNum = num % 100 / 10;
-        int trNum = num % 10;
-        System.out.println("Число: " + num + "->" + firstNum + "," + secNum + "," + trNum + ".");
+        /** int index = simpleString.index0f("Java");
+         System.out.println(simpleString.substring(index)); **/
+
+        System.out.println();
+        System.out.println("__________________________________________");
+
+        System.out.println(sum(6, 12));
+        System.out.println(substraction(10, 5));
+        System.out.println(multiplication(30, 3));
+        System.out.println(divison(30, 3));
+
+
 
 
     }
 
+    public static int sum(int a, int b) {
+        return a + b;
+    }
+
+    private static int substraction(int a, int b) {
+        return a-b;
+    }
+
+    private static int multiplication(int a, int b) {
+        return a * b;
+    }
+    private static int divison(int a, int b) {
+        return a / b;
+    }
+
 }
+
 
