@@ -1,39 +1,44 @@
-import java.sql.SQLOutput;
+package Task1;
+
+import java.util.Arrays;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        comparison( 10.5f, 10.45f,  10 );
-
-    }
-
-    public static void comparison(float m, float n, float a){
-        if (Math.abs(m-a)<Math.abs(n-a))
-            System.out.println("это ближе к " + a+ " чем n");
-        else System.out.println("n ближе к " + a+ " чем m");
+        int[] array = new int[8];
+        Random random = new Random();
+        for (int i=0;i<array.length;i++){
+            array[i] = random.nextInt(1,50);
+        }
+        System.out.println(Arrays.toString(array));
     }
 }
-__________________________________________________________________________
+________________________________________________________________
 
-    public class Main {
+        package Task2;
+
+        import java.util.Random;
+
+public class Main {
     public static void main(String[] args) {
-        calculate(1581);
+        int[] array = new int[5];
+        Random random = new Random();
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(10, 99);
+        }
+        for (int num : array) {
+            System.out.println(num + " ");
+        }
+        System.out.println();
+        boolean isSorted = true;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i - 1] >= array[i]) {
+                isSorted = false;
+                break;
+            }
+        }
+        if (isSorted) System.out.println("не является строгой возрастающей последовательностью");
+        else System.out.println("является строго возрастающей последовательностью");
 
-    }
-
-    public static void calculate(float seconds) {
-        float hours = seconds/3600;
-        if (hours>8) System.out.println("Больше чем чем полный рабочий день");
-        else if(hours>=5) System.out.println("ОСталось " + seconds/3600+ "часов");
-        else if(hours<5 && hours>=2) System.out.println("Осталось " + seconds/3600+ "часа");
-        else if(hours<2 && hours>=1) System.out.println("Остался 1 час");
-        else if(hours<1 && hours>=0) System.out.println("Осталось меньше одного часа");
-        else System.out.println("Число должно быть положительным");
     }
 }
-
-    
-
-
-
-
-
